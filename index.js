@@ -23,6 +23,18 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
 })
 
+document.querySelector('.btn-hold').addEventListener('click',function(){
+  scores[activePlayer] = scores[activePlayer] + currentScore
+  document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer]
+  if(scores[activePlayer] >= 10 ){
+    document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!'
+    document.querySelector('.dice').style.display = 'none'
+    document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner')
+    document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active')
+  } else {
+    nextPlayer()
+  }
+})
 
 function nextPlayer (){
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0
