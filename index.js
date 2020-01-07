@@ -2,6 +2,8 @@ let scores, currentScore, activePlayer, gamePlaying
 
 init()
 
+let lastDice
+
 document.querySelector('.btn-roll').addEventListener('click',
 
 function(){
@@ -10,20 +12,25 @@ function(){
     const diceDOM = document.querySelector('.dice')
     diceDOM.style.display = 'block'
     diceDOM.src = `dice-${dice}.png`
-    if(dice !== 1){
+    if(dice === 6 && lastDice === 6){
+      scores[activePlayer] = 0
+      document.querySelector(`#score-${activePlayer}`).textContent = '0'
+      nextPlayer()
+    } else if (dice !== 1){
       currentScore = currentScore + dice
       document.getElementById(`current-${activePlayer}`).textContent = currentScore
     } else {
       nextPlayer()
     }
-  }
+     lastDice = dice
+  }     
 })
 
 document.querySelector('.btn-hold').addEventListener('click',function(){
   if (gamePlaying){
     scores[activePlayer] = scores[activePlayer] + currentScore
     document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer]
-    if(scores[activePlayer] >= 10 ){
+    if(scores[activePlayer] >= 100 ){
       document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!'
       document.querySelector('.dice').style.display = 'none'
       document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner')
