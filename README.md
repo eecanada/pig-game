@@ -1,6 +1,6 @@
 # Pig-Game 
 
-<img width="1440" alt="Screen Shot 2020-01-06 at 5 26 38 PM" src="https://user-images.githubusercontent.com/53157290/71861423-33833880-30ab-11ea-96da-bbcf36411f63.png">
+<img width="1440" alt="Screen Shot 2020-01-06 at 5 56 55 PM" src="https://user-images.githubusercontent.com/53157290/71862251-1439da80-30ae-11ea-8d68-c2591af54fc3.png">
 
 # Description 
 
