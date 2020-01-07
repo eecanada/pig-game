@@ -30,7 +30,15 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
   if (gamePlaying){
     scores[activePlayer] = scores[activePlayer] + currentScore
     document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer]
-    if(scores[activePlayer] >= 100 ){
+    //instead of using textContent like before I will be using value property which will give me the content the user put in the input field 
+    const finalScore = document.querySelector('.final-score').value 
+    let winningScore
+    if(finalScore){
+      winningScore = finalScore
+    } else {
+      winningScore = 100
+    }
+    if(scores[activePlayer] >= winningScore ){
       document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!'
       document.querySelector('.dice').style.display = 'none'
       document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner')
