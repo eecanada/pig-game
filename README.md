@@ -4,7 +4,7 @@
 
 # Description 
 
-* Pig-Game is a game where two players take turns rolling a dice until one player reaches 100 and wins. If a player rolls a one they lose their current score and it becomes the next players turn. If a player rolls two sixes in a row then their whole global score is reduced to zero and it becomes the next player's turn. 
+* Pig-Game is a game where two players take turns rolling a dice until one player reaches 100 and wins. If a player rolls a one they lose their current score and it becomes the next players turn. If a player rolls two sixes in a row then their whole global score is reduced to zero and it becomes the next player's turn. This game was made to practice DOM manipluation.
 
 # Technologies Used
 * JavaScript
@@ -24,4 +24,4 @@
 
 # Next Steps
 * Add a score system to see how many times each player has won 
-* implement using two dice at a time
+* Implement using two dice at a time
